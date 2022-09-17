@@ -1,0 +1,41 @@
+{
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+      "browser": true,
+      "jest": true
+  },
+  "globals": {
+      "JSX": true,
+      "NodeJS": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "tsdx",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "plugins": ["react", "jsx-a11y", "react-hooks"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"], // Your TypeScript files extension
+      "parserOptions": {
+        "project": ["./tsconfig-eslint.json"], // Specify it only for TypeScript files
+        "tsconfigRootDir": ".",
+        "sourceType": "module",
+        "ecmaFeatures": {
+          "jsx": true // Allows for the parsing of JSX
+        }
+      }
+    }
+  ],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "off", // Checks effect dependencies,
+    "react/display-name": "off"
+
+  }
+}

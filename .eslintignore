@@ -1,0 +1,13 @@
+node_modules
+.vscode
+coverage
+public
+dist
+
+*.scss
+*.json
+*.svg
+*.ico
+*.html
+*.png
+*.jpg
