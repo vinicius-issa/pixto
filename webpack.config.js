@@ -16,7 +16,7 @@ const envKeys =
   }, {})
 
 const config = {
-  "process.env": envKeys,
+  "process.env": envKeys || {},
 }
 
 module.exports = {
